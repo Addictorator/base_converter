@@ -42,6 +42,8 @@ class BaseConverter {
     return power;
   }
 
+  static const int numeric = 10, capNumeric = 36, alphaNumeric = 62, allPrintables = 93;
+
   /// 0-9 [0-9], 10-35 [A-Z], 36-61 [a-z] , 62-92 symbols
   /// Thus, base is (last desired symbol index + 1). Example, for numerics, as 9 is the last digit, add 1 to get base10. Numerics + capitals = base36. Alphanumeric = base62. All_Printable_Chars = base93.
   static const List<String> refTable = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
