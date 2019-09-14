@@ -3,7 +3,7 @@ library flutter_package;
 /// A Calculator.
 class BaseConverter {
 
-  static String itoa2(int value, int base) {
+  static String itoa(int value, int base) {
     assert(
     base >= 1 && base <= 93,
     'Base must be between 1 and 93');
