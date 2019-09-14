@@ -3,7 +3,7 @@ import 'package:base_converter/base_converter.dart';
 
 void main() {
   test('Converts an int to string of given base and vice versa', () {
-    print(BaseConverter.itoa(1568290107882, 62));
-    print(BaseConverter.atoi("RbrFT22", 62));
+    for (int i =0; i < 10000000; i++)
+    BaseConverter.itoa2(1189260752896000000, 62);
   });
 }

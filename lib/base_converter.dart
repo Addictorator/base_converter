@@ -3,7 +3,7 @@ library flutter_package;
 /// A Calculator.
 class BaseConverter {
 
-  static String itoa(int value, int base) {
+  static String itoa2(int value, int base) {
     assert(
     base >= 1 && base <= 93,
     'Base must be between 1 and 93');
@@ -13,12 +13,13 @@ class BaseConverter {
       return builtString;
     }
     else {while (true){
-      int remainder = value % base;
+      int quotient = (value/base).floor(),
+          remainder = value - (base * quotient);
       builtString = "${_refTable[remainder]}$builtString";
       if (value == remainder) {
         return builtString;
       }
-      value = (value/base).floor();
+      value = quotient;
     }
     }}
 
